@@ -280,6 +280,89 @@
       </div>
     </div>
   </section>
+    <!-- قسم نموذج اتفاقية الشراكة والعقد التفاعلي -->
+  <section id="contract-section" class="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+    <div class="glass-card rounded-3xl p-6 sm:p-12 border border-amber-500/30 relative overflow-hidden">
+      
+      <!-- إضاءة خلفية خلف العقد -->
+      <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- عنوان العقد -->
+      <div class="text-center space-y-3 mb-8">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-gold text-accent-gold text-xs font-bold border border-amber-500/30">
+          <i class="fa-solid fa-file-contract"></i>
+          <span>اتفاقية شراكة رسمية وتأمين عوائد</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white">نموذج عقد الشراكة وتسييل الأرباح</h2>
+        <p class="text-gray-400 text-xs sm:text-sm">عقد شفاف يضمن كافة حقوق الطرفين دون طلب كلمة السر أو أي رسوم مسبقة</p>
+      </div>
+
+      <!-- ورقة العقد الزجاجية -->
+      <div class="bg-space-900/90 rounded-2xl p-6 sm:p-8 border border-white/10 space-y-6 text-sm text-gray-300 shadow-2xl leading-relaxed">
+        
+        <!-- الترويسة والتاريخ -->
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center pb-4 border-b border-white/10 gap-2">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-emerald-400"></span>
+            <span class="font-bold text-white text-base">TFK Studio | عقد تفعيل عوائد Meta</span>
+          </div>
+          <span class="text-xs text-accent-cyan font-semibold" id="contract-date">التاريخ: 2026/11/01</span>
+        </div>
+
+        <!-- أطراف العقد -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-space-800/50 p-4 rounded-xl border border-white/5">
+          <div>
+            <span class="text-xs text-accent-gold font-bold block mb-1">الطرف الأول (المستشار التقني):</span>
+            <p class="font-semibold text-white">توفيق سعيد الجويحي (TFK Studio)</p>
+            <span class="text-xs text-gray-400">حضرموت - اليمن</span>
+          </div>
+          <div>
+            <span class="text-xs text-accent-cyan font-bold block mb-1">الطرف الثاني (صانع المحتوى / العميل):</span>
+            <input type="text" id="client-name-input" placeholder="اكتب اسمك الثلاثي أو اسم الصفحة..." class="w-full bg-space-900 border border-white/20 rounded-lg px-3 py-1.5 text-xs text-white focus:outline-none focus:border-accent-gold transition-colors">
+          </div>
+        </div>
+
+        <!-- بنود الاتفاقية -->
+        <div class="space-y-4 text-xs sm:text-sm">
+          <div class="border-r-2 border-amber-400 pr-3">
+            <h4 class="font-bold text-white mb-1">البند الأول: النسبة المالية والشراكة</h4>
+            <p class="text-gray-400">
+              يتفق الطرفان على توزيع الأرباح الصافية بنسبة <span class="text-accent-gold font-bold">30%</span> للطرف الأول مقابل الإدارة والربط التقني الدولي، ونسبة <span class="text-emerald-400 font-bold">70%</span> للطرف الثاني. تستقطع النسبة حصرياً من العوائد الفعلية بعد الاستلام بدون أي مبالغ مقدماً.
+            </p>
+          </div>
+
+          <div class="border-r-2 border-cyan-400 pr-3">
+            <h4 class="font-bold text-white mb-1">البند الثاني: الأمان والسرية المطلقة</h4>
+            <p class="text-gray-400">
+              يلتزم الطرف الأول بعدم طلب كلمة السر الحسابية إطلاقاً، وتقتصر الصلاحيات على إدارة ملف العوائد المالي (Payout Access) فقط، مع الالتزام التام بسرية البيانات المالية الخاصة بالطرف الثاني.
+            </p>
+          </div>
+
+          <div class="border-r-2 border-emerald-400 pr-3">
+            <h4 class="font-bold text-white mb-1">البند الثالث: آلية تسليم الأرباح داخل اليمن</h4>
+            <p class="text-gray-400">
+              تُحَول مستحقات الطرف الثاني شهرياً فور وصولها من فيسبوك عبر الوسيلة التي يختارها (الكريمي، بن دول، العمقي، جيب، ون كاش، أو أم فلوس).
+            </p>
+          </div>
+        </div>
+
+        <!-- الموافقة والتوقيع الرقمي -->
+        <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-2">
+            <input type="checkbox" id="accept-terms" class="w-4 h-4 accent-amber-400 rounded cursor-pointer">
+            <label for="accept-terms" class="text-xs text-gray-300 cursor-pointer select-none">أوافق على بنود الاتفاقية وأود إرسال الطلب للمناقشة</label>
+          </div>
+          
+          <button onclick="sendContractViaWhatsApp()" class="w-full sm:w-auto bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 text-white font-bold px-6 py-2.5 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-lg shadow-emerald-600/20">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>تأكيد الاتفاق وإرسال عبر الواتساب</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
 
   <!-- زر الطلب والتواصل -->
   <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
@@ -363,6 +446,28 @@
 
   <!-- السكربتات البرمجية -->
   <script>
+        // سكربت إرسال بيانات الاتفاقية عبر الواتساب
+    function sendContractViaWhatsApp() {
+      const clientName = document.getElementById('client-name-input').value.trim();
+      const acceptTerms = document.getElementById('accept-terms').checked;
+
+      if (!clientName) {
+        alert('لطفاً، اكتب اسمك الثلاثي أو اسم الصفحة في الخانة المخصصة قبل الإرسال.');
+        return;
+      }
+
+      if (!acceptTerms) {
+        alert('لطفاً، قم بتحديد مربع الموافقة على بنود الاتفاقية.');
+        return;
+      }
+
+      const phoneNumber = "967784074871";
+      const message = `مرحباً أستاذ توفيق، أنا (${clientName})، وافقت على بنود اتفاقية الشراكة وتأمين الأرباح (30% / 70%) المعروضة بموقعك TFK Studio، وأود البدء بإجراءات تفعيل الأرباح لصفحتي.`;
+      
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+    
     const canvas = document.getElementById('space-canvas');
     const ctx = canvas.getContext('2d');
     let stars = [];
